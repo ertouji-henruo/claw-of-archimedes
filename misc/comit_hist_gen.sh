@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for year in $(seq -w 2019 2023)
+for year in $(seq -w 2023 2024)
 do
     for month in $(seq -w 01 12)
     do
