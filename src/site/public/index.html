@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotic Arm Control</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <h1>Robotic Arm Control</h1>
+    <button onclick="controlArm('grab')">Grab</button>
+    <button onclick="controlArm('release')">Release</button>
+
+    <script>
+        const socket = io();
+
+        function controlArm(action) {
+            socket.emit('controlArm', { action });
+            console.log(`Sent command to ${action} the arm`);
+        }
+    </script>
+</body>
+</html>
