@@ -35,5 +35,5 @@ app.get('/', (req, res) => {
 // Start the server
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
-    console.log(`Server is running on https://ch6-redirect.iccybersoc.org`);
+    console.log(`Server is running on https://redirect-201453892011.europe-west1.run.app`);
 });

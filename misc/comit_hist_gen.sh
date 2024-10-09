@@ -7,7 +7,7 @@ do
         for day in $(seq -w 01 28)
         do  
             datetime=$year-$month-$day\T12:34:56
-            gibberish=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13; echo)
+            gibberish=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 15; echo)
             echo $gibberish > misc/test.txt
             git add .
             git commit -m "$gibberish" --date "$datetime"
